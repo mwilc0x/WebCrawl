@@ -16,19 +16,19 @@ public class crawl {
 	
 	public static void main(String[] args) throws IOException {
 
-	  try {
-		System.out.println("What is the website?");
-		String input = keyboard.readLine();
-		URL url = new URL(input);
-		BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
-        String strTemp = "";
+		try {
+			System.out.println("What is the website?");
+			String input = keyboard.readLine();
+			URL url = new URL(input);
+			BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
+			String strTemp = "";
         
-        while(null != (strTemp = br.readLine())){
-          System.out.println(strTemp);
-        }
+			while(null != (strTemp = br.readLine())){
+				System.out.println(strTemp);
+			}
         
-      } catch (Exception ex) {
-          ex.printStackTrace();
-      }
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 }
